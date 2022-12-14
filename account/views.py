@@ -25,7 +25,13 @@ class LoginView(APIView):
 
     @swagger_auto_schema(
         operation_description="Login to the API",
-        request_body=LoginSerializer,
+        request_body=openapi.Schema(
+    type=openapi.TYPE_OBJECT, 
+    properties={
+        'username': openapi.Schema(type=openapi.TYPE_STRING, description='string'),
+        'password': openapi.Schema(type=openapi.TYPE_STRING, description='string'),
+    }
+),
         tags=['account'],
 
         responses={200: login_response_schema}
