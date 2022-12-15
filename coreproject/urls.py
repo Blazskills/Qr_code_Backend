@@ -8,7 +8,8 @@ from rest_framework import authentication
 
 
 from drf_yasg.generators import OpenAPISchemaGenerator
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 class CustomOpenAPISchemaGenerator(OpenAPISchemaGenerator):
     def get_schema(self, request=None, public=False):
@@ -59,3 +60,7 @@ urlpatterns = [
 
          ),
 ]
+
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
