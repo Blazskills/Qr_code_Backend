@@ -31,7 +31,7 @@ class CustomOpenAPISchemaGenerator(OpenAPISchemaGenerator):
     
 schema_view = swagger_get_schema_view(
     openapi.Info(
-        title='Qecode Api',
+        title='Qrcode Api',
         default_version='1.0.0',
         description="API Documentation of Qrcode Application",
         contact=openapi.Contact(email="info@qrcode.com"),
