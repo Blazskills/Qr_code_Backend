@@ -31,10 +31,10 @@ class CustomOpenAPISchemaGenerator(OpenAPISchemaGenerator):
     
 schema_view = swagger_get_schema_view(
     openapi.Info(
-        title='Blesify Api',
+        title='Qecode Api',
         default_version='1.0.0',
-        description="API Documentation of Blesify Application",
-        contact=openapi.Contact(email="info@toismart.com"),
+        description="API Documentation of Qrcode Application",
+        contact=openapi.Contact(email="info@qrcode.com"),
     ),
 
     public=True,
