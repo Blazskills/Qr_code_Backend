@@ -27,8 +27,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG_VALUE') == 'True'
 
-# ALLOWED_HOSTS = ['nest-srm.up.railway.app', '127.0.0.1']
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = ['nest-srm.up.railway.app', '127.0.0.1']
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 
 # Application definition

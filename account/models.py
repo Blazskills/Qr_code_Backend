@@ -58,7 +58,7 @@ class User(AbstractUser):
     username = models.CharField(max_length=60, unique=True)  # username are stored in lower case
     first_name = models.CharField(_('first name'), max_length=1000)
     last_name = models.CharField(_('last name'), max_length=150)
-    email = models.CharField(max_length=70)
+    email = models.EmailField(max_length=70)
     phone_number = models.CharField(max_length=70, null=True, blank=True)
     temp_verification_link = models.URLField(null=True, blank=True)
     temp_password = models.CharField(max_length=60, blank=True)
@@ -69,6 +69,8 @@ class User(AbstractUser):
     created = models.DateTimeField(auto_now_add=True, null=True)
     updated = models.DateTimeField(auto_now=True, null=True)
     is_default = models.BooleanField(default=False)
+    password = models.CharField(_('password'), max_length=128)
+    
 
     objects = CustomUserManager()
 
